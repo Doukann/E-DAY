@@ -1,0 +1,111 @@
+﻿@model KD25_BitirmeProjesi.UI.MVC_Core.Areas.CompanyManager.Models.ViewModels.AddPersonelForm_VM
+
+@{
+    ViewData["Title"] = "AddPersonel";
+}
+
+<h1>AddPersonel</h1>
+
+
+
+<form asp-action="Add" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+        <label asp-for="Personel.FirstName"></label>
+        <input asp-for="Personel.FirstName" class="form-control" />
+        <span asp-validation-for="Personel.FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.SecondName"></label>
+        <input asp-for="Personel.SecondName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.Surname"></label>
+        <input asp-for="Personel.Surname" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.Avatar"></label>
+        <input asp-for="Personel.Avatar" type="file" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.BirthDate"></label>
+        <input asp-for="Personel.BirthDate" class="form-control" type="date" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.CompanyID"></label>
+        <select asp-for="Personel.CompanyID" asp-items="Model.Companies" class="form-control">
+            <option value="">-- Seçiniz --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.DepartmentID"></label>
+        <select asp-for="Personel.DepartmentID" asp-items="Model.Departments" class="form-control">
+            <option value="">-- Seçiniz --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.Proficiency"></label>
+        <select asp-for="Personel.Proficiency" asp-items="Model.Proficiencies" class="form-control">
+            <option value="">-- Seçiniz --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.CurrencyTypeID"></label>
+        <select asp-for="Personel.CurrencyTypeID" asp-items="Model.CurrencyTypes" class="form-control">
+            <option value="">-- Seçiniz --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.Address"></label>
+        <textarea asp-for="Personel.Address" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.Salary"></label>
+        <input asp-for="Personel.Salary" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.PhoneNumber"></label>
+        <input asp-for="Personel.PhoneNumber" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.Email"></label>
+        <input asp-for="Personel.Email" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.UserName"></label>
+        <input asp-for="Personel.UserName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.Password"></label>
+        <input asp-for="Personel.Password" type="password" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Personel.PasswordConfirmed"></label>
+        <input asp-for="Personel.PasswordConfirmed" type="password" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+@* @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} *@

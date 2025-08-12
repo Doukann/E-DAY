@@ -1,0 +1,21 @@
+﻿@using KD25_BitirmeProjesi.UI.MVC_Core.Areas.SiteAdministrator.Models.ViewModels
+@model UserSummary_VM
+
+<h2>Profil Bilgileri</h2>
+
+<div class="card p-3 shadow-sm">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="@Model.Avatar" class="img-fluid rounded" alt="Profil Fotoğrafı" />
+        </div>
+        <div class="col-md-8">
+            <p><strong>Ad Soyad:</strong> @Model.FirstName</p>
+            <p><strong>Ad Soyad:</strong> @Model.Surname</p>
+            <p><strong>Email:</strong> @Model.Email</p>
+            <p><strong>Telefon:</strong> @Model.PhoneNumber</p>
+            <p><strong>Adres:</strong> @Model.Address</p>
+            <p><strong>Meslek:</strong> @Model.Proficiency</p>
+            <p><strong>Departman:</strong> @Model.Department</p>
+        </div>
+    </div>
+</div>
